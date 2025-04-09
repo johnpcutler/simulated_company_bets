@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiative Clusters Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-3xl font-bold text-gray-900 mb-6">Initiative Clusters Analysis</h1>
+            
+            <!-- Evaluation Metrics Table -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8 overflow-x-auto">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Evaluation Metrics by Cluster</h2>
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
+                            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                            <th class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Cluster 0</th>
+                            <th class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Cluster 1</th>
+                            <th class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Cluster 2</th>
+                            <th class="px-6 py-3 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Cluster 3</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Iteration Friendliness</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = not iterative, 10 = highly iterative</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.26</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.78</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.00</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.55</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Technical Risk Profile</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = very high risk, 10 = technically straightforward</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.04</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.80</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.26</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.57</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">User Persona Familiarity</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = totally unknown, 10 = very familiar persona</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.48</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.02</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.42</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.55</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Adoption Risk</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = users may not adopt, 10 = low friction, guaranteed adoption</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.22</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.14</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.95</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.29</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Solution Risk</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = solution unlikely to work, 10 = strong confidence it will land</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.59</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.51</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.32</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.78</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Overall Size</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = long initiative (quarters/years), 10 = days or weeks to launch</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.41</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">3.08</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">3.95</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.02</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dependencies</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = high org dependency, 10 = completely self-contained</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.33</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">3.20</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.16</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.67</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Change Degree</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = wholesale change, 10 = minor adjustment</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.56</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">3.65</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.63</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.06</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Executive Buy-In Risk</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = high likelihood of support pulled, 10 = fully backed</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.89</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.55</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.21</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.10</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Team Morale Risk</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = high burnout risk, 10 = no morale risk</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.33</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.80</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.05</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.45</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Experimentation Friendliness</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = high experimentation risk, 10 = can freely test</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.30</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.94</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.74</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Solution Confidence</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = very low faith in solution, 10 = extremely confident</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">8.07</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.86</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.16</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">7.10</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Lag For Impact</td>
+                            <td class="px-6 py-4 text-sm text-gray-500">1 = impact takes quarters/years to show, 10 = visible in minutes/days</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">6.26</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">3.27</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">4.32</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">5.55</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PCA Visualization -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Principal Component Analysis</h2>
+                <img src="initiative_clusters.png" alt="Initiative Clusters PCA Visualization" class="w-full rounded-lg mb-6">
+                <div class="prose max-w-none">
+                    <p class="text-gray-600">
+                        This visualization shows the clustering of initiatives in 2D space using Principal Component Analysis (PCA). 
+                        Each point represents an initiative, colored by its cluster assignment. The black X markers indicate cluster centroids.
+                        The explained variance ratio shows how much of the data's variance is captured by these two principal components.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Metric Comparison -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Metric Distribution by Cluster</h2>
+                <img src="cluster_metric_comparison.png" alt="Cluster Metric Comparison" class="w-full rounded-lg mb-6">
+                <div class="prose max-w-none">
+                    <p class="text-gray-600">
+                        These box plots show the distribution of scores for each evaluation metric across the clusters.
+                        The boxes show the quartiles, with the middle line representing the median. Whiskers extend to show the rest of the distribution,
+                        and points represent outliers. This helps identify which metrics differentiate the clusters.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Correlation Matrix -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Metric Correlations</h2>
+                <img src="metric_correlation_matrix.png" alt="Metric Correlation Matrix" class="w-full rounded-lg mb-6">
+                <div class="prose max-w-none">
+                    <p class="text-gray-600">
+                        The correlation matrix shows the relationships between different evaluation metrics. 
+                        Red indicates positive correlations, while blue indicates negative correlations. 
+                        The strongest correlations are:
+                    </p>
+                    <ul class="list-disc pl-6 text-gray-600 mt-2">
+                        <li>Solution Risk ↔ Solution Confidence (0.834) - These metrics are measuring the same concept: Solution Risk (1=unlikely to work, 10=will work) and Solution Confidence (1=low faith, 10=high faith) show strong agreement</li>
+                        <li>Overall Size ↔ Lag For Impact (0.791) - Shorter initiatives tend to have shorter lag times before impact</li>
+                        <li>Iteration Friendliness ↔ Experimentation Friendliness (0.785) - These metrics are strongly related, suggesting they often go hand in hand</li>
+                        <li>Overall Size ↔ Experimentation Friendliness (0.772) - Shorter initiatives tend to be more experimentation-friendly</li>
+                        <li>Iteration Friendliness ↔ Overall Size (0.715) - Shorter initiatives tend to be more iteration-friendly</li>
+                    </ul>
+                    <p class="text-gray-600 mt-4">
+                        Note: The Overall Size metric is scored from 1 (long initiative) to 10 (short initiative). 
+                        The positive correlations with experimentation and iteration friendliness suggest that shorter, 
+                        more focused initiatives are easier to experiment with and iterate on.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Radar Chart -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cluster Profiles</h2>
+                <img src="cluster_radar_chart.png" alt="Cluster Radar Chart" class="w-full rounded-lg mb-6">
+                <div class="prose max-w-none">
+                    <p class="text-gray-600">
+                        The radar chart shows the average scores for each cluster across all evaluation metrics.
+                        This visualization helps identify the characteristic strengths and weaknesses of each cluster.
+                        The filled areas make it easy to see the overall shape of each cluster's profile.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Cluster Summaries -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mt-8">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cluster Characteristics</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Cluster 0 -->
+                    <div class="bg-red-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-2">Cluster 0 (27 initiatives)</h3>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Strong in:</span> Executive Buy-In (8.9), User Persona Familiarity (8.5), Team Morale (8.3)
+                        </p>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Weak in:</span> Dependencies (5.3), Lag For Impact (6.3), Overall Size (6.4)
+                        </p>
+                        <p class="text-gray-700">
+                            <span class="font-medium">Notable initiatives:</span> Trailblaze Lens Community Platform, Virtual Workspaces Enhancement, Strategic Partnerships
+                        </p>
+                    </div>
+                    <!-- Cluster 1 -->
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-2">Cluster 1 (49 initiatives)</h3>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Strong in:</span> Executive Buy-In (7.6), User Persona Familiarity (6.0), Solution Confidence (5.9)
+                        </p>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Weak in:</span> Overall Size (3.1), Dependencies (3.2), Lag For Impact (3.3)
+                        </p>
+                        <p class="text-gray-700">
+                            <span class="font-medium">Notable initiatives:</span> Sustainable AR Smartglasses, AI Customization Framework, Green Tech Initiative
+                        </p>
+                    </div>
+                    <!-- Cluster 2 -->
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-2">Cluster 2 (19 initiatives)</h3>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Strong in:</span> Executive Buy-In (8.2), User Persona Familiarity (7.4), Solution Confidence (7.2)
+                        </p>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Weak in:</span> Overall Size (3.9), Dependencies (4.2), Lag For Impact (4.3)
+                        </p>
+                        <p class="text-gray-700">
+                            <span class="font-medium">Notable initiatives:</span> AI-driven Data Security Enhancements, Predictive Analytics Integration Platform, Integrated Retail Partnerships
+                        </p>
+                    </div>
+                    <!-- Cluster 3 -->
+                    <div class="bg-orange-50 p-4 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-2">Cluster 3 (49 initiatives)</h3>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Strong in:</span> Executive Buy-In (8.1), Iteration Friendliness (7.6), User Persona Familiarity (7.6)
+                        </p>
+                        <p class="text-gray-700 mb-2">
+                            <span class="font-medium">Weak in:</span> Dependencies (4.7), Overall Size (5.0), Change Degree (5.1)
+                        </p>
+                        <p class="text-gray-700">
+                            <span class="font-medium">Notable initiatives:</span> AR Navigation for Cyclists, Healthcare Data Security Module, AI Adoption in Emerging Markets
+                        </p>
+                    </div>
+                </div>
+                <!-- Analysis Summary -->
+                <div class="mt-6 p-4 bg-gray-50 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-2">Key Patterns</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>All clusters show strong Executive Buy-In (scores > 7.5)</li>
+                        <li>User Persona Familiarity consistently ranks among top metrics</li>
+                        <li>Dependencies and Overall Size are common challenges across clusters</li>
+                        <li>Natural groupings emerge:
+                            <ul class="list-disc pl-6 mt-1">
+                                <li>Platform and partnership initiatives (Cluster 0)</li>
+                                <li>Large transformative initiatives (Cluster 1)</li>
+                                <li>Security and infrastructure initiatives (Cluster 2)</li>
+                                <li>User-focused, iterative initiatives (Cluster 3)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
